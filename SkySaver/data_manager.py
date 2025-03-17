@@ -11,9 +11,8 @@ class DataManager:
             
             new_data = {
                 "price": {
-                    "iataCode": "TEST"
+                    "iataCode": city_data["iataCode"]
                 }
             }
-            
             response = requests.put(url = update_endpoint, json = new_data)
             print(f"Updated row {row_id}: {response.status_code}")

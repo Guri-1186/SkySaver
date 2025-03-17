@@ -20,7 +20,6 @@ data = response.json()
 sheet_data = data["prices"]
 datamanager.update_destination_codes(sheet_data)
 
-
 for city_data in sheet_data:
     if not city_data["iataCode"]:
         city_data["iataCode"] = flightSearch.get_destination_code(city_data["city"])
